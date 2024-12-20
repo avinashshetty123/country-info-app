@@ -47,6 +47,7 @@ a {
     gap: 64px;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-inline:auto ;
 } 
 .dark-mode-header{
     background-color: #021526;
@@ -94,6 +95,7 @@ a {
     margin-block: 8px;
 }
 .search-filter-container{
+    max-width: 1200px;
     margin-top: 16px;
     margin-bottom: 48px;
     display: flex;
@@ -116,6 +118,7 @@ a {
     background-color:#789DBC;
     outline: none;
     cursor: pointer;
+    width: 90%;
 }
 .search-container i{
     margin-right: 8px;
