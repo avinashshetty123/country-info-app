@@ -1,3 +1,4 @@
+
 .back-btn{
     background-color: #D91656;
     color: whitesmoke;
@@ -9,10 +10,18 @@
     background-color: #fb0255;
     
 }
-.country-details-container{
+.country-details-container,shimmer{
     max-width: 1200px;
     margin: 0 auto;
 }
+.shimmer{
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin-top: 64px;
+    background-colour:gray;
+}
+
 .country-detail{
     display: flex;
     align-items: center;
