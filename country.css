@@ -12,6 +12,7 @@
 .country-details-container{
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 32px;
 }
 .country-detail{
     display: flex;
