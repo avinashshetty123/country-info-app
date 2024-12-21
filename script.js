@@ -60,18 +60,18 @@ searchInput.addEventListener("input", ((e) => {
 }))
 
 darkModeToggle.addEventListener("click", () => {
-
+//fixing dark-mode
   document.body.classList.toggle("dark-mode-body");
   document.querySelector(".header-container").classList.toggle("dark-mode-header");
-
   const countryCards = document.querySelectorAll(".country-card");
   countryCards.forEach(card => {
     card.classList.toggle("dark-mode-card");
 
   });
-
+  const isDarkMode=document.body.classList.contains("dark-mode-body");
+  localStorage.setItem("darkMode", isDarkMode ? "on" : "off");
   const icon = darkModeToggle.querySelector("i");
-  if (document.body.classList.contains("dark-mode-body")) {
+  if (isDarkMode) {
     icon.classList.replace("bi-moon-fill", "bi-sun-fill");
     darkModeToggle.innerHTML = `<i class="bi bi-sun-fill"></i>&nbsp;&nbsp;Light Mode`;
   } else {
@@ -80,4 +80,18 @@ darkModeToggle.addEventListener("click", () => {
   }
 });
 
+window.addEventListener("load",()=>{
+  const darkModeState = localStorage.getItem("darkMode");
+  if (darkModeState === "on") {
+    document.body.classList.add("dark-mode-body");
+    document.querySelector(".header-container").classList.add("dark-mode-header");
 
+    const countryCards = document.querySelectorAll(".country-card");
+    countryCards.forEach(card => {
+      card.classList.add("dark-mode-card");
+    });
+    const icon = darkModeToggle.querySelector("i");
+    icon.classList.replace("bi-moon-fill", "bi-sun-fill");
+    darkModeToggle.innerHTML = `<i class="bi bi-sun-fill"></i>&nbsp;&nbsp;Light Mode`;
+  }
+})
