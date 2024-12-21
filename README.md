@@ -58,7 +58,7 @@
 ![Light Mode Screenshot](/screenshots/lightmode.png)
 
 ### 🌜 Dark Mode  
-![Dark Mode Screenshot](/screenshots/darkmode(1).png)
+![Dark Mode Screenshot](screenshots/darkmode (1).png)
 
 ---
 
