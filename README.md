@@ -55,10 +55,10 @@
 ## 📸 Screenshots
 
 ### 🌞 Light Mode  
-![Light Mode Screenshot](https://via.placeholder.com/800x400?text=Light+Mode+Screenshot)
+![Light Mode Screenshot](/screenshots/lightmode.png)
 
 ### 🌜 Dark Mode  
-![Dark Mode Screenshot](https://via.placeholder.com/800x400?text=Dark+Mode+Screenshot)
+![Dark Mode Screenshot](/screenshots/darkmode.png)
 
 ---
 
