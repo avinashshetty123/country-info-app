@@ -110,6 +110,9 @@ a {
     padding: 0 16px;
     padding-left: 24px;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .search-container input{
     border: none;
@@ -157,5 +160,13 @@ a {
     }
     .search-filter-container select{
         padding: 10px;
+    }
+}
+@media(max-width: 400px){
+    .search-container{
+        width: 90%;
+    }
+    .search-filter-container select{
+        width: 90%;
     }
 }
