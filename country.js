@@ -10,6 +10,7 @@ const topLevelDomain=document.querySelector('.domain')
 const currencies=document.querySelector('.currency')
 const languages=document.querySelector('.lang')
 const borderCountries = document.querySelector('.border-countries')
+const darkModeToggle = document.querySelector(".dark-mode-btn");
 fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
   .then((res) => res.json())
   .then(([country]) => {
@@ -49,3 +50,23 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
       });
   }
   })
+
+  darkModeToggle.addEventListener("click", () =>{
+    document.body.classList.toggle("dark-mode-body");
+    document.querySelector(".header-container").classList.toggle("dark-mode-header");
+
+    const darkModeicon = document.querySelector(".dark-mode-btn i");
+    if(document.body.classList.contains("dark-mode-body")){
+      darkModeicon.classList.replace("bi-moon-fill", "bi-sun-fill");
+      darkModeToggle.innerHTML = `<i class="bi bi-sun-fill"></i>&nbsp;&nbsp;Light Mode`;
+    }
+    else {
+      darkModeicon.classList.replace("bi-sun-fill", "bi-moon-fill");
+      darkModeToggle.innerHTML = `<i class="bi bi-moon-fill"></i>&nbsp;&nbsp;Dark Mode`;
+    }
+
+    });
+
+
+
+  

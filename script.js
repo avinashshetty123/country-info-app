@@ -6,7 +6,7 @@ let allCountriesData
 fetch("https://restcountries.com/v3.1/all")
   .then((res) => res.json())
   .then((data) => {
- renderCards(data)
+    renderCards(data)
     allCountriesData = data
   })
   .catch((error) => {
@@ -14,30 +14,28 @@ fetch("https://restcountries.com/v3.1/all")
     countryContainer.innerHTML = "<p>Failed to load countries data.</p>";
   });
 
-filterRegion.addEventListener("change", (e) =>{
-  if(e.target.value === 'filter'){
+filterRegion.addEventListener("change", (e) => {
+  if (e.target.value === 'filter') {
     fetch("https://restcountries.com/v3.1/all").then((res) => res.json())
-    .then((data) =>{
-  renderCards(data)
-    })
-     }
-     
-     else{
-  fetch(`https://restcountries.com/v3.1/region/${e.target.value}`).then((res) => res.json())
-  .then((data) =>{
-renderCards(data)
-  })
-}
-} )
+      .then((data) => {
+        renderCards(data)
+      })
+  }
 
-function renderCards(data){
-  countryContainer.innerHTML=''
+  else {
+    fetch(`https://restcountries.com/v3.1/region/${e.target.value}`).then((res) => res.json())
+      .then((data) => {
+        renderCards(data)
+      })
+  }
+})
+
+function renderCards(data) {
+  countryContainer.innerHTML = ''
   data.forEach((country) => {
- 
     const countryCard = document.createElement("a");
     countryCard.classList.add("country-card");
     countryCard.href = `/country.html?name=${country.name.common}`
-    // countryCard.target="_blank"
     const cardHtml = `
       <img src="${country.flags.svg}" alt="${country.name.common} flag">
       <div class="card-text">
@@ -51,7 +49,7 @@ function renderCards(data){
   });
 }
 
-searchInput.addEventListener("input",((e)=>{
+searchInput.addEventListener("input", ((e) => {
   const filteredCountries = allCountriesData.filter((country) => country.name.common.toLowerCase().includes(e.target.value.toLowerCase()))
   renderCards(filteredCountries)
 }))

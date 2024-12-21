@@ -9,6 +9,10 @@
     background-color: #fb0255;
     
 }
+.dark-mode-body{
+    background-color: #03346E;
+    color: seashell;
+}
 .country-details-container{
     max-width: 1200px;
     margin: 0 auto;
