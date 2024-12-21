@@ -5,7 +5,7 @@
 body {
     margin: 0;
     font-family: Nunito, sans-serif;
-    background-color: #FFE3E3;
+    background-color: #D8C4B6;
 }
 main{
     padding: 24px;
@@ -21,7 +21,9 @@ a {
 .header-container {
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.557);
     padding-inline: 24px;
-    background-color: #789DBC;
+    /* background-color: #3293e1; */
+    background-color: #3E5879;
+    color: #F5EFE7;
 }
 .header-content {
     display: flex;
@@ -50,10 +52,12 @@ a {
 } 
 .dark-mode-header{
     background-color: #021526;
-    color: #E2E2B6;
+    /* color: #E2E2B6; */
+    color: #D8C4B6;
 }
 .dark-mode-body{
-    background-color: #03346E;
+    /* background-color: #002756; */
+    background-color: #213555;
 }
 
 
@@ -99,10 +103,12 @@ a {
     margin-bottom: 48px;
     display: flex;
     justify-content: space-between;
+    color: #F5EFE7;
     /* flex-direction: row; */
 }
 .search-container{
-    background-color:#789DBC;
+    /* background-color:#3293e1; */
+    background-color: #3E5879;
     max-width: 350px;
     width: 100%;
     box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.587);
@@ -117,7 +123,9 @@ a {
 .search-container input{
     border: none;
     padding: 16px;
-    background-color:#789DBC;
+    /* background-color:#3293e1; */
+    background-color: #3E5879;
+    color: #F5EFE7;
     outline: none;
     cursor: pointer;
     width: 90%;
@@ -126,11 +134,15 @@ a {
     margin-right: 8px;
 }
 .search-container input::placeholder{
-    color: #021526;
+    /* color: #021526; */
+    color: #F5EFE7;
+
 }
 .search-filter-container select{
     padding:12px;
-    background-color:#789DBC;
+    /* background-color:#3293e1; */
+    background-color: #3E5879;
+    color: #F5EFE7;
     width:250px;
     outline: none;
     border: none;
