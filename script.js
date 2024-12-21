@@ -63,7 +63,6 @@ darkModeToggle.addEventListener("click", () => {
 
   document.body.classList.toggle("dark-mode-body");
   document.querySelector(".header-container").classList.toggle("dark-mode-header");
-  document.querySelector(".search-container input::placeholder").classList.toggle("dark-mode-inp");
 
   const countryCards = document.querySelectorAll(".country-card");
   countryCards.forEach(card => {
