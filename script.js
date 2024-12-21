@@ -1,10 +1,13 @@
 const countryContainer = document.querySelector(".countries-container");
 const darkModeToggle = document.querySelector(".dark-mode-btn");
 const filterRegion = document.querySelector(".filter-by-region");
+const searchInput = document.querySelector(".search-input");
+let allCountriesData
 fetch("https://restcountries.com/v3.1/all")
   .then((res) => res.json())
   .then((data) => {
  renderCards(data)
+    allCountriesData = data
   })
   .catch((error) => {
     console.error("Error fetching countries data:", error);
@@ -48,7 +51,12 @@ function renderCards(data){
   });
 }
 
-
+searchInput.addEventListener("input", (e) => {
+    allCountriesData.forEach((country)=>{
+      const fliteredCountry=country.filter((country)=>{country.name.common.toLowerCase().includes(e.target.value.toLowerCase())})
+      console.log(fliteredCountry)
+    })
+})
 
 darkModeToggle.addEventListener("click", () => {
 
