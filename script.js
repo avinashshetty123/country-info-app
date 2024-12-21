@@ -51,12 +51,10 @@ function renderCards(data){
   });
 }
 
-searchInput.addEventListener("input", (e) => {
-    allCountriesData.forEach((country)=>{
-      const fliteredCountry=country.filter((country)=>{country.name.common.toLowerCase().includes(e.target.value.toLowerCase())})
-      console.log(fliteredCountry)
-    })
-})
+searchInput.addEventListener("input",((e)=>{
+  const filteredCountries = allCountriesData.filter((country) => country.name.common.toLowerCase().includes(e.target.value.toLowerCase()))
+  renderCards(filteredCountries)
+}))
 
 darkModeToggle.addEventListener("click", () => {
 
