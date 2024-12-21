@@ -33,7 +33,7 @@ renderCards(data)
 function renderCards(data){
   countryContainer.innerHTML=''
   data.forEach((country) => {
-    console.log(country)
+ 
     const countryCard = document.createElement("a");
     countryCard.classList.add("country-card");
     countryCard.href = `/country.html?name=${country.name.common}`
@@ -65,7 +65,7 @@ darkModeToggle.addEventListener("click", () => {
   const countryCards = document.querySelectorAll(".country-card");
   countryCards.forEach(card => {
     card.classList.toggle("dark-mode-card");
-    console.log(card);
+
   });
 
   const icon = darkModeToggle.querySelector("i");

@@ -13,7 +13,6 @@ const borderCountries = document.querySelector('.border-countries')
 fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
   .then((res) => res.json())
   .then(([country]) => {
-    console.log(country.borders);
     flagImg.src=country.flags.svg;
     flagImg.alt=country.name.common;
     countryNameH1.textContent=country.name.common;
@@ -44,7 +43,6 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
           const countryTag=document.createElement('a')
           countryTag.innerText=data.name.common
           countryTag.href = `country.html?name=${data.name.common}`
-          console.log(countryTag)
          borderCountries.append(countryTag)
       })
 
